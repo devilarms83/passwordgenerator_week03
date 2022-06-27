@@ -52,7 +52,7 @@ function passLength() {
   
     // If user pressed Cancel, immediately end function
     if (!pLength) {
-      return;
+      return
     } 
     // Test if pLength is Not a Number (isNaN) or if its less than 8 or greater than 128
     else if (isNaN(pLength) || pLength < 8 || pLength > 128){
@@ -98,8 +98,16 @@ function charType() {
 
   // Confirm if any types were selected
   if (!lCase && !uCase && !numCase && !specCase) {
-    alert("You must select at least one type of password options to include! [lowercase, uppercase, numbers, special characters]")
-    charType()
+    var caseSelector = window.confirm("You must select at least one type of password options to include! [lowercase, uppercase, numbers, special characters]")
+
+    if (caseSelector) {
+      charType()
+    } 
+    // End program if cancelled
+    else {
+      return
+    }
+
   }
 
   // Return list of characters included for password selection

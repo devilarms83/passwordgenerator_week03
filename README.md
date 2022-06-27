@@ -8,11 +8,11 @@
 
   <p align="center">
     <a href="https://devilarms83.github.io/passwordgenerator_week03/">
-        <img src="./assets/images/.png" alt="" >
+        <img src="./assets/images/demo.png" alt="" >
     </a>
     <br />
     <br />
-    For Week 3, we're required to create an application that an employee can use to generate a random password based on criteria they've selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+    For Week 3, we're required to create an application that an employee can use to generate a random password based on criteria they've selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript. It has a clean and polished, responsive user interface that adapts to multiple screen sizes.
     <br />
     <a href="https://devilarms83.github.io/passwordgenerator_week03/">View Demo</a>
   </p>
