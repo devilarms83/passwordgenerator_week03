@@ -63,6 +63,8 @@ THEN the password is either displayed in an alert or written to the page
 * [CSS](https://en.wikipedia.org/wiki/CSS)
 * [JS](https://www.javascript.com/)
 
+This week, we primarily worked on adding Javascript to perform the password generator using themes we learned during the pass week, including variables, objects, functions, for loops, if/else statements, window.prompt, and a few others from Web APIs (week 4) for setting attributes.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- GITHUB -->
