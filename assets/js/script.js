@@ -23,20 +23,32 @@ function writePassword() {
 
   if (password != null) {
     document.getElementById("password").innerHTML = password
+    document.getElementById("password").style.backgroundColor = "green"
+    document.getElementById("password").style.color = "white"
   }
 
 }
 
 // Main password generator function
 function generatePassword(){
-  // Defines password length with passLength function
-  var passwordLength = passLength()
+  // Define password length 
+  var pLength = window.prompt("Please enter password length (min 8, max 128):","8")
+  
+  // If user pressed Cancel, immediately end function
+  if (!pLength) {
+    return
+  } 
+  // Test if pLength is Not a Number (isNaN) or if its less than 8 or greater than 128
+  else if (isNaN(pLength) || pLength < 8 || pLength > 128){
+    alert ("Entered value is not a valid number. Please retry.")
+    generatePassword()
+  } 
 
-  // Defines password character types with charType function
+  // Define password character types with charType function
   var passwordOptions = charType()
 
   // For loop that randomly selects characters from the charTypes selected
-  for (var x = 0; x <= passwordLength; x++){
+  for (var x = 0; x <= pLength; x++){
     var pSelect = Math.floor(Math.random()*passTemp.length+1)
     passW += passTemp.charAt(pSelect)
   }
@@ -48,21 +60,7 @@ function generatePassword(){
 // Function to set password length
 function passLength() {
     // Password length window prompt
-    var pLength = window.prompt("Please enter password length (min 8, max 128):","8")
-  
-    // If user pressed Cancel, immediately end function
-    if (!pLength) {
-      return
-    } 
-    // Test if pLength is Not a Number (isNaN) or if its less than 8 or greater than 128
-    else if (isNaN(pLength) || pLength < 8 || pLength > 128){
-      alert ("Entered value is not a valid number. Please retry.")
-      passLength()
-    } 
-    // Return Password Length if entry is valid
-    else {
-      return pLength
-    } 
+
 
 }
 
@@ -115,9 +113,8 @@ function charType() {
 }
 
 function clearText() {
-  // Clear any previous passwords generated
-  document.getElementById("password").value = ""
-
+  // Reloads page
+  location.reload()
 }
 
 // Add event listener to generate button
