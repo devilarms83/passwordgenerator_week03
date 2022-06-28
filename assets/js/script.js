@@ -11,9 +11,8 @@ var passOptions = {
 }
 
 // Initialize passTemp
-var passTemp = ""
+var passTemp = []
   
-
 // Write password to the #password input
 function writePassword() {
 
@@ -48,8 +47,8 @@ function generatePassword(){
     generatePassword()
   } 
 
-  // Define password character types with charType function
-  var passwordOptions = charType()
+  // Invoke charType function
+  charType()
 
   // For loop that randomly selects characters from the charTypes selected
   for (var x = 0; x < pLength; x++){
@@ -62,7 +61,8 @@ function generatePassword(){
 }
 
 // Function to determine characters to include in password
-function charType() {  
+function charType() {
+  passTemp = []
 
   // Confirm to include lowercase
   var lCase = window.confirm("Include lowercase?")
