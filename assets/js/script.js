@@ -52,7 +52,7 @@ function generatePassword(){
   var passwordOptions = charType()
 
   // For loop that randomly selects characters from the charTypes selected
-  for (var x = 0; x <= pLength; x++){
+  for (var x = 0; x < pLength; x++){
     var pSelect = Math.floor(Math.random()*passTemp.length+1)
     passW += passTemp.charAt(pSelect)
   }
