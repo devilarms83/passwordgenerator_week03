@@ -10,12 +10,13 @@ var passOptions = {
   specialChars: "!#$%&()*+,-./:;<=>?@[]^_`{|}~"
 }
 
-// passTemp and passW are temporary variables to pass along data
+// Initialize passTemp
 var passTemp = ""
-var passW = ""
+  
 
 // Write password to the #password input
 function writePassword() {
+
   var password = generatePassword()
   var passwordText = document.querySelector("#password")
 
@@ -31,8 +32,11 @@ function writePassword() {
 
 // Main password generator function
 function generatePassword(){
+  // Initialize variable passW
+  let passW = ""
+
   // Define password length 
-  var pLength = window.prompt("Please enter password length (min 8, max 128):","8")
+  var pLength = window.prompt("Please enter password length (min 8, max 128):")
   
   // If user pressed Cancel, immediately end function
   if (!pLength) {
@@ -57,15 +61,9 @@ function generatePassword(){
   return passW
 }
 
-// Function to set password length
-function passLength() {
-    // Password length window prompt
-
-
-}
-
 // Function to determine characters to include in password
 function charType() {  
+
   // Confirm to include lowercase
   var lCase = window.confirm("Include lowercase?")
 
